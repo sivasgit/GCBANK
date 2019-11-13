@@ -35,7 +35,7 @@ public class Base {
 
 
     @BeforeClass
-    @Parameters("{browser}")
+    @Parameters("browser")
     public void setup(@Optional("siva") String br) throws FileNotFoundException {
 
        properties= new Properties();
@@ -61,8 +61,8 @@ public class Base {
             properties.getProperty("ie");
             driver=new InternetExplorerDriver();
         }
-        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+       // driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+       // driver.manage().window().maximize();
 
 
 
